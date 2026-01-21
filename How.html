@@ -4,369 +4,520 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-    <title>Document</title>
+    <title>How It Works - Skill Swap</title>
     
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .font-saira {
+            font-family: 'Saira', sans-serif;
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 50;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
-<body>
-    
-
-
-  
-
-
 <body class="m-0 p-0">
 
-  <!-- Hero Section Wrapper -->
-  <section class="relative w-full h-screen overflow-hidden">
+    <!-- Hero Section Wrapper -->
+    <section class="relative w-full min-h-screen overflow-hidden">
 
-    <!-- Background Image -->
-    <img
-      src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768887203/Hero_Section_fzllb5.png"
-      alt="Background Graphic"
-      class="absolute inset-0 w-full h-full object-cover -z-10"
-    />
+        <!-- Background Image -->
+        <img
+            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768887203/Hero_Section_fzllb5.png"
+            alt="Background Graphic"
+            class="absolute inset-0 w-full h-full object-cover -z-10"
+        />
 
-    <!-- Overlay Content -->
-    <div class="relative z-10 px-10 py-6">
+        <!-- Overlay Content -->
+        <div class="relative z-10 px-4 sm:px-6 lg:px-10 py-6">
 
-      <!-- Navigation -->
-      <nav class="flex items-center justify-between">
+            <!-- Navigation -->
+            <nav class="flex items-center justify-between">
 
-        <!-- Logo -->
-        <div>
-          <img
-            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768887357/image_12_1_sipwjj.png"
-            alt="SkillSwap Logo"
-            class="h-20"
-          />
+                <!-- Logo -->
+                <div>
+                    <img
+                        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768887357/image_12_1_sipwjj.png"
+                        alt="SkillSwap Logo"
+                        class="h-12 sm:h-16 lg:h-20"
+                    />
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="desktop-nav shadow shadow-gray-400 rounded-full px-4 lg:px-8 py-3 bg-white">
+                    <ul class="flex gap-4 lg:gap-10 text-xs lg:text-sm font-medium">
+                        <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
+                        <li><a href="How.html" class="hover:text-blue-700">How it works</a></li>
+                        <li><a href="Explore.html" class="hover:text-blue-700">Explore</a></li>
+                        <li><a href="Community.html" class="hover:text-blue-700">Community</a></li>
+                        <li><a href="About.html" class="hover:text-blue-700">About Us</a></li>
+                        <li><a href="Contact.html" class="hover:text-blue-700">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Desktop Action Buttons -->
+                <div class="desktop-nav flex gap-4 lg:gap-6">
+                    <button class="bg-blue-950 text-white px-3 lg:px-5 py-2 lg:py-3 rounded-lg text-sm lg:text-base">
+                        <a href="#">Get Started</a>
+                    </button>
+                    <button class="bg-white text-blue-900 px-3 lg:px-5 py-2 lg:py-3 rounded-lg text-sm lg:text-base">
+                        <a href="#">Sign in</a>
+                    </button>
+                </div>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </nav>
+
         </div>
 
-        <!-- Navigation Links -->
-        <div class="shadow shadow-gray-400 rounded-full px-8 py-3 bg-white">
-          <ul class="flex gap-10 text-sm font-medium">
-            <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
-            <li><a href="How.html" class="hover:text-blue-700">How it works</a></li>
-            <li><a href="Explore.html" class="hover:text-blue-700">Explore</a></li>
-            <li><a href="Community.html" class="hover:text-blue-700">Community</a></li>
-            <li><a href="About.html" class="hover:text-blue-700">About Us</a></li>
-            <li><a href="Contact.html" class="hover:text-blue-700">Contact Us</a></li>
-          </ul>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="flex justify-between items-center mb-8">
+                <img
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768887357/image_12_1_sipwjj.png"
+                    alt="SkillSwap Logo"
+                    class="h-16"
+                />
+                <button onclick="toggleMenu()" class="text-2xl">×</button>
+            </div>
+            
+            <ul class="space-y-6 text-lg font-medium mb-8">
+                <li><a href="index.html" class="block hover:text-blue-700">Home</a></li>
+                <li><a href="How.html" class="block hover:text-blue-700">How it works</a></li>
+                <li><a href="Explore.html" class="block hover:text-blue-700">Explore</a></li>
+                <li><a href="About.html" class="block hover:text-blue-700">About Us</a></li>
+                <li><a href="Community.html" class="block hover:text-blue-700">Community</a></li>
+                <li><a href="Contact.html" class="block hover:text-blue-700">Contact Us</a></li>
+            </ul>
+            
+            <div class="space-y-4">
+                <button class="w-full bg-blue-950 text-white px-5 py-3 rounded-lg">
+                    Get Started
+                </button>
+                <button class="w-full bg-blue-200 text-blue-900 px-5 py-3 rounded-lg">
+                    Explore Skills
+                </button>
+            </div>
         </div>
 
-        <!-- Action Buttons -->
-        <div class="flex gap-6">
-          <button class="bg-blue-950 text-white px-5 py-3 rounded-lg">
-            <a href="#">Get Started</a>
-          </button>
-          <button class="bg-white text-blue-900 px-5 py-3 rounded-lg">
-            <a href="#">Sign in</a>
-          </button>
+        <!-- Saas 50k+ -->
+        <div class="flex justify-center mt-6 lg:mt-10 px-4">
+            <div class="shadow flex items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 rounded-[20px] bg-white text-xs sm:text-sm lg:text-base">
+                <button class="shadow bg-blue-950 text-white px-2 py-2 rounded-[10px] text-xs sm:text-sm">
+                    50K+
+                </button>
+                <p class="text-xs sm:text-sm lg:text-base">SaaS for Students, Freelancers and Junior Professionals</p>
+            </div>
         </div>
 
-      </nav>
+        <!-- Hero Text -->
+        <div class="text-center px-4 sm:px-6 lg:px-8">
+            <h1 class="font-saira text-2xl sm:text-3xl lg:text-4xl font-bold text-white mt-5">
+                How Collaboration Works on Skill Swap
+            </h1>
+            <p class="text-white mt-4 text-sm sm:text-base lg:text-lg max-w-4xl mx-auto">
+                Skill Swap & Collaboration Hub allows you to exchange skills through a clear, structured process. This page explains how to create a profile, find the right collaborators, work together effectively, and build professional credibility through skill exchange
+            </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 lg:mt-10 justify-center px-4">
+            <button class="shadow px-6 py-3 bg-blue-950 text-white rounded-[10px]">Get Started</button>
+            <button class="bg-blue-200 text-blue-900 px-6 py-3 rounded-lg">Explore Skills</button>
+        </div>
+
+    </section>
+
+    <!-- Simple Structured -->
+    <div class="text-center mt-10 px-4 sm:px-6 lg:px-8">
+        <h2 class="text-xl sm:text-2xl lg:text-[30px] font-bold font-saira">A Simple, Structured Way to Collaborate and Grow</h2>
+        <p class="mt-4 text-sm sm:text-base max-w-4xl mx-auto">
+            Skill Swap & Collaboration Hub helps students and early-career professionals exchange skills in a transparent, professional way. Instead of paying for help, users collaborate by contributing what they know and learning from others.
+        </p>
+    </div>
+
+    <!-- Create Profile sections -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 lg:space-y-24 mt-10 lg:mt-20">
+
+        <!-- Create Your Profile -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20">
+            
+            <!-- Text -->
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-lg sm:text-xl lg:text-[20px] font-semibold mb-4">Create Your Profile</h2>
+                <p class="mb-3">Start by setting up a professional profile that highlights:</p>
+
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Skills you can offer</p>
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Skills you need help with</p>
+                <p class="mb-4"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> A short bio and availability</p>
+
+                <p>
+                    Your profile helps others understand your strength and decide whether you're a good fit for collaboration.
+                </p>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1">
+                <img
+                    class="w-full h-auto object-contain"
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889213/Create_your_profile_image_whcyfe.png"
+                    alt="Create Your Profile"
+                />
+            </div>
+        </div>
+
+        <!-- Offer or Request Skills -->
+        <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-20">
+
+            <!-- Text -->
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-lg sm:text-xl lg:text-[20px] font-semibold mb-4">Offer or Request Skills</h2>
+                <p class="mb-3">Post what you can offer or request help in areas such as:</p>
+
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Skills you are willing to offer</p>
+                <p class="mb-4"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Design, writing, coding, research, or business</p>
+
+                <p>
+                    Each skill post includes clear descriptions, expectations, and tags to make matching easier.
+                </p>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1">
+                <img
+                    class="w-full h-auto object-contain"
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889521/offer_or_request_skills_image_hkywur.png"
+                    alt="Offer or Request Skills"
+                />
+            </div>
+        </div>
+
+        <!-- Find and Review Matches -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20">
+
+            <!-- Text -->
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-lg sm:text-xl lg:text-[20px] font-semibold mb-4">Find and Review Matches</h2>
+                <p class="mb-3">Browse available skills or receive suggestions based on your interests.</p>
+
+                <p class="mb-2">Before reaching out, you can review:</p>
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> User profiles</p>
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Ratings and feedback</p>
+                <p class="mb-4"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Previous collaboration history</p>
+
+                <p>This helps you make informed decisions and collaborate with confidence.</p>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1">
+                <img
+                    class="w-full h-auto object-contain"
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889521/offer_or_request_skills_image_hkywur.png"
+                    alt="Find and Review Matches"
+                />
+            </div>
+        </div>
+
+        <!-- Collaborate with Structure -->
+        <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-20">
+
+            <!-- Text -->
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-lg sm:text-xl lg:text-[20px] font-semibold mb-4">Collaborate with Structure</h2>
+                <p class="mb-3">Once both parties agree, collaboration moves into a shared workspace where you can:</p>
+
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Communicate via in-platform messaging</p>
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Track progress using a collaboration board</p>
+                <p class="mb-4"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Clarify tasks, timelines, and expectations</p>
+
+                <p>This structure keeps collaboration organized and accountable.</p>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1">
+                <img
+                    class="w-full h-auto object-contain"
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768890528/Collaborate_with_structure_Image_hbidiv.png"
+                    alt="Collaborate with Structure"
+                />
+            </div>
+        </div>
+
+        <!-- Complete and Share Feedback -->
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-20">
+
+            <!-- Text -->
+            <div class="flex-1 flex flex-col justify-center">
+                <h2 class="text-lg sm:text-xl lg:text-[20px] font-semibold mb-4">Complete and Share Feedback</h2>
+                <p class="mb-4">After the collaboration is complete:</p>
+
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Both users leave feedback and ratings</p>
+                <p class="mb-2"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Contributions are documented</p>
+                <p class="mb-4"><i class="fa-solid fa-circle text-[4px] text-black mr-2"></i> Reputations are updated</p>
+
+                <p>This system encourages reliability, quality work, and continuous improvement across the platform.</p>
+            </div>
+
+            <!-- Image -->
+            <div class="flex-1">
+                <img
+                    class="w-full h-auto object-contain"
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768891229/Complete_and_share_feedback_image_ocwuip.png"
+                    alt="Complete and Share Feedback"
+                />
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Built for Reliable -->
+    <div class="text-center mt-12 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold mb-4 font-saira max-w-5xl mx-auto">
+            A Collaboration Model Designed for Real Learning and Professional Growth
+        </h1>
+        <p class="text-sm sm:text-base max-w-4xl mx-auto">
+            Skill Swap & Collaboration Hub is built to solve practical collaboration challenges faced by students and early-career professionals. Each part of the platform is designed to remove common barriers to getting help, sharing skills, and completing meaningful work.
+        </p>
+    </div>
+
+    <!-- Verified Users/Image -->
+    <div class="flex flex-col lg:flex-row justify-center mt-12 lg:mt-20 gap-8 lg:gap-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex-1">
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Removes Financial Barriers
+                </h4>
+                <p class="text-sm sm:text-base">
+                    Many people need help but cannot afford to pay for professional services. Skill swap removes money from the equation, allowing users to access support by contributing their own skills in return. This creates more opportunities for learning, experimentation, and growth--especially for students and entry-level professionals.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Encourages Mutual Commitment
+                </h4>
+                <p class="text-sm sm:text-base">
+                    Unlike one-sided help requests, skill swap is based on mutual value exchange. Both parties are invested in the outcome, which increases reliability, accountability, and follow-through during collaborations. This shared responsibility leads to more productive and respectful working relationships.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Builds Real-World Experience
+                </h4>
+                <p class="text-sm sm:text-base">
+                    Collaborations on the platform involve real tasks, not simulations. Users gain hands-on experience they can reference in portfolios, resumes, and interviews. Over time, this helps users move from learning to doing--an essential step in career development.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Promotes Trust Through Transparency
+                </h4>
+                <p class="text-sm sm:text-base">
+                    Profiles, ratings, feedback, and collaboration tracking create visibility into how users work and interact. This transparency helps users make informed decisions before committing to a collaboration. Trust is built gradually through consistent behavior and documented outcomes.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Provides Structure Without Complexity
+                </h4>
+                <p class="text-sm sm:text-base">
+                    Skill Swap offers just enough structure--profiles, skill posts, messaging, and collaboration boards--to keep work organized without overwhelming users. This balance allows flexibility while maintaining clarity and accountability.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h4 class="text-orange-500 font-semibold mb-2">
+                    <i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Supports Long-Term Professional Growth
+                </h4>
+                <p class="text-sm sm:text-base">
+                    By encouraging collaboration, feedback, and reputation-building, Skill Swap helps users develop not just technical skills, but also communication, teamwork, and reliability--qualities essential for long-term career success.
+                </p>
+            </div>
+        </div>
+
+        <!-- Image part -->
+        <div class="flex-1 flex justify-center items-center">
+            <img 
+                class="w-full h-auto max-w-md" 
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768751436/Frame_2147258771_qfndht.png" 
+                alt="Collaborate image"
+            />
+        </div>
+    </div>
+
+    <!-- Ready to Start Skill Swapping? -->
+    <div class="mt-12 lg:mt-20 text-center bg-[rgba(236,238,255,0.27)] py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <h1 class="font-semibold font-saira text-xl sm:text-2xl lg:text-[30px] mb-3">
+            Ready to Start Skill Swapping?
+        </h1>
+        <p class="text-sm sm:text-base max-w-4xl mx-auto">
+            Build experience, collaborate with trusted peers, and get real work done by exchanging skills-not money. Join a growing community focused on learning, contribution, and professional growth.
+        </p>
+
+        <!-- Button Section -->
+        <div class="mt-8 lg:mt-20 flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <button class="shadow bg-blue-950 px-6 py-3 rounded-[10px] text-white font-semibold w-full sm:w-auto">
+                Start Skill Swapping
+            </button>
+            <button class="shadow px-6 py-3 rounded-[10px] bg-[rgba(138,148,224,0.4)] font-semibold w-full sm:w-auto">
+                Explore Skills
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="bg-[rgb(12,16,42)] py-10 px-4 sm:px-6 lg:px-8">
+        <img 
+            class="mx-auto lg:mx-0 lg:ml-20 mb-10 h-16" 
+            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768850740/image_12_riqp9d.png" 
+            alt="Skill Swap Logo"
+        />
+
+        <!-- Footer Content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto text-white">
+
+            <!-- Contact Info -->
+            <div class="space-y-4">
+                <p class="flex items-center gap-2">
+                    <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+                    <span class="text-sm">customercare@skillswap.com</span>
+                </p>
+                <p class="flex items-center gap-2">
+                    <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+                    <span class="text-sm">+2348101234567</span>
+                </p>
+                <p class="flex items-start gap-2">
+                    <i class="fa-solid fa-map-pin mt-1" style="color: #ffffff;"></i>
+                    <span class="text-sm">Skillswap HQ, 45 Unity Crescent, Lagos, Nigeria</span>
+                </p>
+                <p class="flex items-start gap-2">
+                    <i class="fa-solid fa-user-group mt-1" style="color: #ffffff;"></i>
+                    <span class="text-sm">Monday - Friday: 9:00 AM - 5:00 PM (WAT)</span>
+                </p>
+            </div>
+
+            <!-- Product -->
+            <div>
+                <h4 class="text-lg lg:text-[20px] mb-4">Product</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="How.html" class="hover:text-blue-300">How it Works</a></li>
+                    <li><a href="Explore.html" class="hover:text-blue-300">Explore Skills</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Trust & Safety</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Community Guideline</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+                <h4 class="text-lg lg:text-[20px] mb-4">Legal</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-blue-300">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Company -->
+            <div>
+                <h4 class="text-lg lg:text-[20px] mb-4">Our Company</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="About.html" class="hover:text-blue-300">About Us</a></li>
+                    <li><a href="Contact.html" class="hover:text-blue-300">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-blue-300">Meet The Team</a></li>
+                    <li><a href="#" class="hover:text-blue-300">FAQs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Social media Icons -->
+        <div class="flex justify-center lg:justify-start lg:ml-20 gap-4 mt-10">
+            <a href="#" class="rounded-full shadow bg-white p-2 hover:bg-gray-200 transition">
+                <i class="fa-brands fa-linkedin-in text-black"></i>
+            </a>
+            <a href="#" class="rounded-full shadow bg-white p-2 hover:bg-gray-200 transition">
+                <i class="fa-brands fa-twitter text-black"></i>
+            </a>
+            <a href="#" class="rounded-full shadow bg-white p-2 hover:bg-gray-200 transition">
+                <i class="fa-brands fa-instagram text-black"></i>
+            </a>
+            <a href="#" class="rounded-full shadow bg-white p-2 hover:bg-gray-200 transition">
+                <i class="fa-brands fa-facebook-f text-black"></i>
+            </a>
+        </div>
+
+        <hr class="border-t border-gray-600 my-6 max-w-6xl mx-auto" />
+
+        <!-- Copyright -->
+        <div class="text-white text-center text-sm">
+            <p>&copy; 2026 Skill Swap & Collaboration Hub. All rights reserved.</p>
+        </div>
+
+    </div>
+
+    <script src="Script/how.js"></script>
 
     
-
-    </div>
-
-    <!-- Saas 50k+ -->
-
-<div class="flex justify-center mt-10">
-  <div class="shadow flex items-center gap-4 px-4 py-2 rounded-[20px] bg-white">
-    <button class="shadow bg-blue-950 text-white px-2 py-2 rounded-[10px]">
-      50K+
-    </button>
-
-    <p>SaaS for Students, Freelancers and Junior Professionals</p>
-  </div>
-</div>
-
-<div class="text-center">
-    <h1 class="font-[Saira] text-4xl font-bold text-white mt-5">How Collaboration Works on Skill Swap <br></h1><br>
-    <p class="text-white">Skill Swap & Collaboration Hub allows you to exchange skills through a clear,structured process. <br>This page explains how to create a profile, find the right collaborators,work together effectively, <br>and build professional credibility through skill exchange</p>
-
-</div>
-
-<div class="flex gap-6 mt-10 justify-center">
-    <button class="shadow px-6 py-2 bg-blue-950 text-white rounded-[10px]">Get Started</button>
-    <button class="bg-blue-200 text-blue-1100 px-5 py-3 rounded-lg">Explore Skills</button>
-</div>
-
-  </section>
-  <!-- Simple Structured -->
-
-  <div class="text-center mt-10">
-    <h2 class="text-[30px] font-bold font-[Saira]">A Simple,Structured Way to Collaborate and Grow</h2>
-    <p>Skill Swap & Collaboration Hub helps students and early-career professionals exchange skills in a transparent,professional way. instead of paying for help,users <br>collaborate by contrubiting what they know and learning from others.</p>
-
-  </div>
-
-  <!-- Create Profile sections-->
-
-  <div class="max-w-6xl mx-auto px-4 space-y-24 mt-10">
-
-  <!-- Create Your Profile -->
-  <div class="flex gap-20 min-h-[360px]">
-    
-    <!-- Text -->
-    <div class="flex-1 h-full flex flex-col justify-center">
-      <h2 class="text-[20px] font-semibold">Create Your Profile</h2>
-      <p>Start by setting up a professional profile that highlights:</p>
-
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Skills you can offer</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Skills you need help with</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> A short bio and availability</p>
-
-      <p>
-        Your profile helps others understand your strength and decide whether
-        you're a good fit for collaboration.
-      </p>
-    </div>
-
-    <!-- Image -->
-    <div class="flex-1 h-full">
-      <img
-        class="h-full w-full object-contain"
-        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889213/Create_your_profile_image_whcyfe.png"
-        alt=""
-      />
-    </div>
-  </div>
-
-  <!-- Offer or Request Skills -->
-  <div class="flex gap-20 min-h-[360px]">
-
-    <!-- Image -->
-    <div class="flex-1 h-full">
-      <img
-        class="h-full w-full object-contain"
-        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889521/offer_or_request_skills_image_hkywur.png"
-        alt=""
-      />
-    </div>
-
-    <!-- Text -->
-    <div class="flex-1 h-full flex flex-col justify-center">
-      <h2 class="text-[20px] font-semibold">Offer or Request Skills</h2>
-      <p>Post what you can offer or request help in areas such as:</p>
-
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Skills you are willing to offer</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Design, writing, coding, research, or business</p>
-
-      <p>
-        Each skill post includes clear descriptions, expectations, and tags
-        to make matching easier.
-      </p>
-    </div>
-  </div>
-
-  <!-- Find and Review Matches -->
-  <div class="flex gap-20 min-h-[360px]">
-
-    <!-- Text -->
-    <div class="flex-1 h-full flex flex-col justify-center">
-      <h2 class="text-[20px] font-semibold">Find and Review Matches</h2>
-      <p>Browse available skills or receive suggestions based on your interests.</p>
-
-      <p>Before reaching out, you can review:</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> User profiles</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Ratings and feedback</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Previous collaboration history</p>
-
-      <p>This helps you make informed decisions and collaborate with confidence.</p>
-    </div>
-
-    <!-- Image -->
-    <div class="flex-1 h-full">
-      <img
-        class="h-full w-full object-contain"
-        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768889521/offer_or_request_skills_image_hkywur.png"
-        alt=""
-      />
-    </div>
-  </div>
-
-  <!-- Collaborate with Structure -->
-  <div class="flex gap-20 min-h-[360px]">
-
-    <!-- Image -->
-    <div class="flex-1 h-full">
-      <img
-        class="h-full w-full object-contain"
-        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768890528/Collaborate_with_structure_Image_hbidiv.png"
-        alt=""
-      />
-    </div>
-
-    <!-- Text -->
-    <div class="flex-1 h-full flex flex-col justify-center">
-      <h2 class="text-[20px] font-semibold">Collaborate with Structure</h2>
-      <p>Once both parties agree, collaboration moves into a shared workspace where you can:</p>
-
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Communicate via in-platform messaging</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Track progress using a collaboration board</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Clarify tasks, timelines, and expectations</p>
-
-      <p>This structure keeps collaboration organized and accountable.</p>
-    </div>
-  </div>
-
-  <!-- Complete and Share Feedback -->
-  <div class="flex gap-20 min-h-[360px]">
-
-    <!-- Text -->
-    <div class="flex-1 h-full flex flex-col justify-center">
-      <h2 class="text-[20px] font-semibold">Complete and Share Feedback</h2>
-      <p>After the collaboration is complete:</p><br>
-
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Both users leave feedback and ratings</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Contributions are documented</p>
-      <p><i class="fa-solid fa-circle text-[4px] text-black"></i> Reputations are updated</p><br>
-
-      <p>This system encourages reliability,quality work,and continous improvement across the platform.</p>
-    </div>
-
-    <!-- Image -->
-    <div class="flex-1 h-full">
-      <img
-        class="h-full w-full object-contain"
-        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768891229/Complete_and_share_feedback_image_ocwuip.png"
-        alt=""
-      />
-    </div>
-  </div>
-
-</div>
-
-<!-- Built for Reliable -->
-
-<div class="text-center mt-12">
-  <h1 class="text-2xl font-bold mb-4 font-[Saira]">A Collaboration Model Designed for Real Learning and Professiona Growth</h1>
-  <p>Skill Swap & Collaboration Hub is built to solve practical collaboration challenges faced by students and early-career <br>professionals. Each part of the platform is designed to remove common barriers to getting help, sharing skills, and completing <br>meaningful work.</p>
-</div>
-
-<!-- Verified Users/Image -->
-
-<div class="flex justify-center mt-20 gap-16">
-  <div>
-    <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Removes Financial Barriers</h4>
-    <p>Many people need help but cannot afford to pay for professional services. Skill <br>swap removes money from the equation,allowing users to access support by <br>contributing their own skills in return. <br>This creates more opportunities for learning,experimentation,and growth-- <br>especially for students and entry-level professionals.</p><br>
-
-       <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Encourages Mutual Commitment</h4>
-    <p>Unlike one-sided help requests,skill swap is based on mutual value exchange <br>Both parties are invested in the outcome,which increases reliability, <br>accountability,and follow-through during collaborations. <br>This shared responsibility leads to more productive and respectful working <br>relationships.</p><br>
-
-      <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Builds Real-World Experience</h4>
-    <p>Collaborations on the platform involve real tasks,not simulations. Users gain <br>hands-on experience they can reference in portfolios, resumes, and interviews. <br>Over time,this helps users move from learning to doing--an essentialstep in <br>career development.</p><br>
-
-     <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i> Promotes Trust Through Transparency</h4>
-    <p>Profiles ratings,feedback, and collaboration tracking create visibility into how <br>users work and interact. This transparency helps users make informed <br>decisions before commiting to a collaboration. <br>Trust is built gradually through consistent behavior and documented outcomes.</p><br>
-
-     <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i>Provides Structure Without Complexity</h4>
-    <p>Skill Swap offers just enough structure--profiles,skill posts,messaging,and <br>collaboration boards--to keep work organized without overwhelming users. <br> This balance allows flexibility while maintaining clarity and accountability. </p><br>
-
-    <h4 class="text-orange-500 font-semibold"><i class="fa-solid fa-circle text-[8px]" style="color: #dd6e0f;"></i>Supports Long-Term Professional Growth</h4>
-    <p>By encouraging collaboration, feedback, and reputation--building,Skill Swap <br>helps users develop not just technical skills,but also communication, <br>teamwork,and relaibility-- qualities essentail for long-term career success.<br>
-  </div>
-  <!-- Image part -->
-  <div><img class="h-[100%]" src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768751436/Frame_2147258771_qfndht.png" alt="Collaborate image"></div>
-</div>
-
-
-<!-- Ready to Start Skill Swapping? -->
-
-<div class="mt-20 text-center  bg-[rgba(236,238,255,0.27)] py-20">
-  <h1 class="font-semibold font-[Saira] text-[30px] mb-3 ">Ready to Start Skill Swapping?</h1>
-  <p>Build experience, collaborate with trusted peers, and get real work done by exchanging skills-not moey. Join a <br>growing community focused on learning,contribution,and professional growth. </p>
-
-  <!-- Button Section -->
-
-  <div class="mt-20 flex gap-4 justify-center">
-
-    <button class="shadow bg-blue-950 px-6 py-3 rounded-[10px] text-white font-semibold">Start Skill Swapping</button>
-  <button class="shadow px-6 py-3 rounded-[10px] bg-[rgba(138,148,224,0.4)] font-semibold
-">Explore Skills</button>
-
-  </div>
-
-  <!-- Footer Section -->
-
-<div class="bg-[rgb(12,16,42)] py-10 mt-20">
-  <img class="ml-50 mb-10" src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768850740/image_12_riqp9d.png" alt="">
-
-  <!-- Parent table Div -->
-  
-
-    <div class="flex gap-30 justify-center">
-
-<!-- Table contents -->
-      <div class="text-white">
-    <p><i class="fa-regular fa-envelope ml-[-30%]" style="color: #ffffff;"></i> customercare@skillswap.com</p><br>
-    <p><i class="fa-solid fa-phone ml-[-55%]" style="color: #ffffff;"></i> +2348101234567 </p><br>
-    <p><i class="fa-solid fa-map-pin" style="color: #ffffff;"></i> Skillswap Hq,45 Unity Crescent,Lagos,Nigeria</p><br><br>
-    <p><i class="fa-solid fa-user-group ml-[-5%]" style="color: #ffffff;"></i> Monday -Friday:9:00 AM -5:00 PM (WAT)</p><br>
-    
-  </div>
-  <div class="text-white ">
-    <h4 class="text-[20px]">Product</h4><br>
-    <p>How it Works</p><br>
-    <p>Explore Skills</p><br>
-    <p>Trust & Safety</p><br>
-    <p>Community Guideline</p>
-
-  </div>
-
-  <div class="text-white">
-    <h4 class="text-[20px]">Legal</h4><br>
-    <p>Terms of Service</p><br>
-    <p>Privacy Policy</p>
-
-  </div>
-
-  <div class="text-white">
-    <h4 class="text-[20px]">Our Company</h4><br>
-    <p>About Us</p><br>
-    <p>Contact Us</p><br>
-    <p>Meet The Team</p><br>
-    <p>FAQs</p>
-
-  </div>
-
-    </div>
-
-    <!-- Social media Icons -->
-
-    <div class="ml-[-55%] mb-10 space-x-5 mt-10" >
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-linkedin-in"></i></span>
-
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-twitter" style="color: #000000;"></i></span>
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-instagram" style="color: #000000;"></i></span>
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></span>
-    </div><br>
-
-    <hr class="border-t border-gray-300 my-6 ml-60 mr-60" />
-
-  
-
-  <!-- &copy footer -->
-
-<div class="text-white text-center mt-10">
-  <p>&copy; 2026 Skill Swap & Collaboration Hub. All rights reserved. </p>
-
-</div>
-
-</div>
-
-
-  
 
 </body>
 </html>
