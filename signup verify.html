@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up Verification</title>
+
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-[Inter] relative min-h-screen">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 min-h-screen flex flex-col">
+
+    <!-- Logo -->
+    <div class="flex justify-center pt-8">
+      <img 
+        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1769111476/image_15_jdtso8.png"
+        alt="Logo"
+        class="h-50"
+      />
+    </div>
+
+    <!-- Message -->
+    <div class="inline-block mx-auto mt-16 shadow shadow-gray-500 rounded-[5px] p-6 text-center max-w-[640px]">
+
+      <h2 class="font-semibold font-[Saira] text-[34px] mb-4">
+        Verify Your Email
+      </h2>
+
+      <p class="mb-10 whitespace-nowrap text-[12px]">
+        We've sent a verification link to your email address.Please verify your account to continue.
+      </p>
+
+      <p class="text-orange-600 mb-8">
+        Didn't receive the email? Check your spam folder.
+      </p>
+
+      <!-- Button -->
+      <a href="Signin.html" class="inline-block">
+        <button
+          type="button"
+          class="px-50 h-14 bg-blue-950 text-white rounded-md font-medium 
+                 hover:bg-blue-900 transition cursor-pointer whitespace-nowrap"
+        >
+          Resend Verification Email
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+</body>
+</html>
