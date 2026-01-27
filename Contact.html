@@ -167,16 +167,17 @@
                         ></textarea>
                     </div>
 
-                    <div>
-                        
-                            href="#"
-                            class="block bg-blue-950 px-6 py-3 sm:py-4 text-white rounded-[5px] 
-                            text-center transition-all duration-300 
-                            hover:bg-blue-900 hover:underline text-sm sm:text-base font-medium"
-                        >
-                            Submit
-                        </a>
-                    </div>
+                   <div>
+    <a 
+        href="#"
+        class="block bg-blue-950 px-6 py-3 sm:py-4 text-white rounded-[5px] 
+               text-center transition-all duration-300 
+               hover:bg-blue-900 hover:underline text-sm sm:text-base font-medium"
+    >
+        Submit
+    </a>
+</div>
+
 
                 </form>
             </div>
@@ -476,41 +477,9 @@
         </div>
     </div>
 
-    <script>
-        // FAQ Toggle Function
-        function toggleFAQ(id) {
-            for (let i = 1; i <= 5; i++) {
-                const content = document.getElementById(`content-${i}`);
-                const icon = document.getElementById(`icon-${i}`);
+    <script src="Script/contact.js"></script>
 
-                if (i === id) {
-                    const isHidden = content.classList.contains("hidden");
-                    content.classList.toggle("hidden", !isHidden);
-                    icon.textContent = isHidden ? "−" : "+";
-                } else {
-                    content.classList.add("hidden");
-                    icon.textContent = "+";
-                }
-            }
-        }
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-                mobileMenu.classList.remove('flex');
-            }
-        });
-    </script>
+    
 
 </body>
 </html>
