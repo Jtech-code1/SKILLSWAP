@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <div class="text-2xl font-bold text-indigo-600">
+                    <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png" alt="">
+                </div>
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg w-64 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <i class="far fa-bell text-gray-600 cursor-pointer hover:text-indigo-600"></i>
+                <a href="messaging.html"><i class="far fa-comment text-gray-600 cursor-pointer hover:text-indigo-600"></i></a>
+                <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1769273636/Frame_2147258844_fcumnu.png" alt="Profile" class="w-8 h-8 rounded-full cursor-pointer">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <!-- Page Title -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-900">User Profile</h1>
+            <p class="text-gray-600 mt-1">Create a clear layout to exchange skills and collaborate with someone who fits your needs.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Profile Card -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6">
+                        <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                            <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977607/Frame_90_1_frwzqs.png" alt="Profile" class="w-16 h-16 rounded-full">
+                            <div>
+                                <h2 class="text-xl font-bold text-gray-900 font-[Saira]">Chidera Okafor</h2>
+                                <p class="text-gray-400 font-medium font-[Saira]">Frontend Developer Student</p>
+                                <div class="flex items-center text-gray-600 text-sm mt-1">
+                                    <i class="fas fa-map-marker-alt mr-1"></i>
+                                    <span>Lagos, Nigeria</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"><a href="messaging.html">Message</a></button>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="flex space-x-3 mb-6">
+                        <!-- <i class="fab fa-facebook text-gray-400 hover:text-indigo-600 cursor-pointer"></i>
+                        <i class="fab fa-twitter text-gray-400 hover:text-indigo-600 cursor-pointer"></i>
+                        <i class="fab fa-instagram text-gray-400 hover:text-indigo-600 cursor-pointer"></i>
+                        <i class="fab fa-linkedin text-gray-400 hover:text-indigo-600 cursor-pointer"></i> -->
+
+
+                        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   ⭐⭐⭐⭐      4.9 Ratings (34)
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+                        <i class="far fa-calendar"></i>
+                        <span>4 Exchanges</span>
+                    </div>
+
+                    <!-- Badges -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="flex items-center space-x-3 p-3 bg-indigo-50 rounded-lg">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-trophy text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600">Skills Requested</p>
+                                <p class="text-lg font-bold text-gray-900">3</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-indigo-50 rounded-lg">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-handshake text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600">Collaboration</p>
+                                <p class="text-lg font-bold text-gray-900">5</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 p-3 bg-indigo-50 rounded-lg">
+                            <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-star text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-600">Rating</p>
+                                <p class="text-lg font-bold text-gray-900">5</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio Section -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Bio</h3>
+                    <p class="text-gray-600 leading-relaxed">
+
+I’m a Frontend Developer focused on building responsive, user-friendly web applications. I translate design concepts and user requirements into clean, efficient code using modern web technologies. My goal is to create interfaces that are visually appealing, highly functional, and provide seamless user experiences across devices.</p>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Skills</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-pen-nib text-indigo-600"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 mb-2">Wireframing</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-brain text-indigo-600"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 mb-2">Wireframing</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="flex items-center justify-center mb-2">
+                                <div class="w-12 h-12 bg-indigo-50 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-palette text-indigo-600"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 mb-2">Wireframing</p>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-teal-500 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ratings & Reviews Section -->
+<div class="bg-white rounded-lg shadow-sm p-6">
+    <h3 class="text-xl font-bold text-gray-900 mb-4 font-[Saira]">Ratings & Reviews</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Review 1 -->
+        <div class="flex space-x-4">
+            <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977923/Frame_90_2_l0d76y.png" alt="Reviewer" class="w-10 h-10 rounded-full flex-shrink-0">
+            <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                    <h4 class="font-semibold text-gray-900">Princess Project Manager</h4>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">Results-driven Project Manager skilled in planning, coordinating, and delivering projects on time and within scope. Experienced in managing cross-functional teams, aligning stakeholders, and turning ideas into successful outcomes.</p>
+                <div class="flex space-x-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="far fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="flex space-x-4">
+            <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1769273636/Frame_2147258844_fcumnu.png" alt="Reviewer" class="w-10 h-10 rounded-full flex-shrink-0">
+            <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                    <h4 class="font-semibold text-gray-900">Andre Silverson Project Manager</h4>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">Detail-oriented Project Manager with a strong focus on organization, communication, and execution. Passionate about streamlining workflows, managing risks, and ensuring project goals align with business objectives.</p>
+                <div class="flex space-x-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="far fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="flex space-x-4">
+            <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977607/Frame_90_1_frwzqs.png" alt="Reviewer" class="w-10 h-10 rounded-full flex-shrink-0">
+            <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                    <h4 class="font-semibold text-gray-900">Nicolas Kitch Project Manager</h4>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">Strategic Project Manager dedicated to leading teams through clear direction and structured processes. Adept at balancing timelines, resources, and quality to deliver high-impact projects efficiently.</p>
+                <div class="flex space-x-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="far fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="flex space-x-4">
+            <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977153/Frame_90_nedzzq.png" alt="Reviewer" class="w-10 h-10 rounded-full flex-shrink-0">
+            <div class="flex-1">
+                <div class="flex items-center justify-between mb-1">
+                    <h4 class="font-semibold text-gray-900">Dominick Lukers Project Manager</h4>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">Proactive Project Manager with a hands-on approach to problem-solving and collaboration. Skilled in driving project success through effective planning, progress tracking, and continuous improvement.</p>
+                <div class="flex space-x-1">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <i class="far fa-star text-yellow-400"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition font-medium">Accept</button>
+                    <button class="bg-white text-gray-700 border border-gray-300 px-8 py-3 rounded-lg hover:bg-gray-50 transition font-medium">Reject</button>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="space-y-6">
+                <!-- Experience Section -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Experience</h3>
+                    <div class="space-y-4">
+                        <!-- Experience 1 -->
+                        <div class="flex space-x-3">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-semibold">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">2024-2025 Vephla University Intern</h4>
+                                <p class="text-sm text-gray-600 mt-1">UI/UX Intern with an academic background in design and technology, currently gaining hands-on experience in user research, wireframing, and interface design while applying classroom knowledge to real-world projects.</p>
+                            </div>
+                        </div>
+
+                        <!-- Experience 2 -->
+                        <div class="flex space-x-3">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 bg-indigo-100 rounded flex items-center justify-center text-indigo-600 font-semibold">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">2023-2024 Alt University Intern</h4>
+                                <p class="text-sm text-gray-600 mt-1">UI/UX Intern with a school background in digital design, learning how to turn ideas into user-friendly interfaces through research, wireframes, and prototyping.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Collaborations Section -->
+                <div class="bg-white rounded-lg shadow-sm p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Recent Collaborations</h3>
+                    <div class="space-y-4">
+                        <!-- Collaboration 1 -->
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-semibold text-gray-900">E-commerce Website Design</h4>
+                                <span class="bg-teal-500 text-white text-xs px-3 py-1 rounded-full">Completed</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">A modern e-commerce website designed for seamless product discovery, easy navigation, and a smooth checkout experience, focused on improving usability and conversions.</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="far fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Collaboration 2 -->
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-semibold text-gray-900">E-commerce Website Design</h4>
+                            </div>
+                            <p class="text-sm text-gray-600 mb-2">A clean and responsive e-commerce website design built to showcase products clearly while delivering a smooth and engaging shopping experience across all devices.</p>
+                            <div class="flex space-x-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="far fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="Script/view_applicants_profile.js"></script>
+</body>
+</html>
