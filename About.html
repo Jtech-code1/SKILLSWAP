@@ -4,353 +4,743 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-      <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <style>
+        /* Beautiful Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            60% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+            80% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        /* Animation Classes */
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slideInLeft {
+            animation: slideInLeft 0.9s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-slideInRight {
+            animation: slideInRight 0.9s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-scaleIn {
+            animation: scaleIn 0.7s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .animate-bounceIn {
+            animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+            opacity: 0;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        /* Stagger delays for sequential animations */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+        .delay-4 { animation-delay: 0.4s; }
+        .delay-5 { animation-delay: 0.5s; }
+        .delay-6 { animation-delay: 0.6s; }
+        
+        /* Mobile menu toggle */
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .mobile-menu.active {
+            max-height: 600px;
+        }
+        
+        /* Fixed background for hero section */
+        .hero-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll;
+            }
+        }
+        
+        /* Hover Effects */
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+        
+        /* Card shine effect */
+        .card-shine {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-shine::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(255, 255, 255, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+        
+        .card-shine:hover::before {
+            left: 100%;
+        }
+        
+        /* Smooth transitions */
+        a, button {
+            transition: all 0.3s ease;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, #f1f5f9, #e2e8f0);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+            border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #1e40af, #2563eb);
+        }
+        
+        /* Image hover effect */
+        .image-hover {
+            overflow: hidden;
+        }
+        
+        .image-hover img {
+            transition: transform 0.6s ease;
+        }
+        
+        .image-hover:hover img {
+            transform: scale(1.08);
+        }
+        
+        /* Bullet point animation */
+        .bullet-item {
+            transition: all 0.3s ease;
+        }
+        
+        .bullet-item:hover {
+            padding-left: 0.5rem;
+            background-color: rgba(239, 246, 255, 0.5);
+        }
+        
+        .bullet-item:hover .bullet-dot {
+            transform: scale(1.5);
+            background-color: #3b82f6;
+        }
+        
+        .bullet-dot {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-     <!-- Hero Section Wrapper -->
-  <section class="relative w-full h-screen overflow-hidden">
+<body class="overflow-x-hidden">
+    <!-- Hero Section Wrapper -->
+    <section class="relative w-full min-h-screen overflow-hidden">
+        <!-- Background Image - Fixed on scroll -->
+        <div class="absolute inset-0 w-full h-full -z-10 hero-bg" style="background-image: url('https://res.cloudinary.com/dezoqbzim/image/upload/v1768667383/Hero_section_ydi77m.png');"></div>
 
-    <!-- Background Image -->
-    <img
-      src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768667383/Hero_section_ydi77m.png"
-      alt="Background Graphic"
-      class="absolute inset-0 w-full h-full object-cover -z-10"
-    />
+        <!-- Overlay Content -->
+        <div class="relative z-10 px-4 sm:px-6 lg:px-10 py-4 lg:py-6">
+            <!-- Navigation -->
+            <nav class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                <!-- Logo and Mobile Menu Button -->
+                <div class="flex items-center justify-between w-full lg:w-auto animate-fadeIn">
+                    <img
+                        src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png"
+                        alt="SkillSwap Logo"
+                        class="h-14 sm:h-16 lg:h-20 hover-scale"
+                    />
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobileMenuBtn" class="lg:hidden text-2xl p-2 hover:bg-white/20 rounded-lg">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
 
-    <!-- Overlay Content -->
-    <div class="relative z-10 px-10 py-6">
+                <!-- Navigation Links - Desktop -->
+                <div class="hidden lg:block shadow shadow-gray-400 rounded-full px-6 xl:px-8 py-3 bg-white/80 backdrop-blur animate-scaleIn delay-1">
+                    <ul class="flex gap-6 xl:gap-10 text-sm font-medium">
+                        <li><a href="index.html" class="hover:text-blue-700 hover:scale-110 inline-block">Home</a></li>
+                        <li><a href="How.html" class="hover:text-blue-700 hover:scale-110 inline-block">How it works</a></li>
+                        <li><a href="Explore.html" class="hover:text-blue-700 hover:scale-110 inline-block">Explore</a></li>
+                        <li><a href="Community.html" class="hover:text-blue-700 hover:scale-110 inline-block">Community</a></li>
+                        <li><a href="About.html" class="hover:text-blue-700 hover:scale-110 inline-block">About Us</a></li>
+                        <li><a href="Contact.html" class="hover:text-blue-700 hover:scale-110 inline-block">Contact Us</a></li>
+                    </ul>
+                </div>
 
-      <!-- Navigation -->
-      <nav class="flex items-center justify-between">
+                <!-- Action Buttons - Desktop -->
+                <div class="hidden lg:flex gap-4 xl:gap-6 animate-fadeIn delay-2">
+                    <button class="bg-blue-950 text-white px-4 xl:px-5 py-2.5 xl:py-3 rounded-lg hover:bg-blue-900 hover-glow hover-scale">
+                        <a href="Signup.html">Get Started</a> 
+                    </button>
+                    <button class="bg-blue-200 text-blue-900 px-4 xl:px-5 py-2.5 xl:py-3 rounded-lg hover:bg-blue-300 hover-glow hover-scale">
+                        <a href="Signin.html">Sign in</a>
+                    </button>
+                </div>
+            </nav>
 
-        <!-- Logo -->
-        <div>
-          <img
-            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768668000/image_16_udh8fu.png"
-            alt="SkillSwap Logo"
-            class="h-20"
-          />
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu lg:hidden bg-white/90 backdrop-blur rounded-2xl mt-4 shadow-lg">
+                <ul class="flex flex-col p-4 text-sm font-medium space-y-3">
+                    <li><a href="index.html" class="block py-2 hover:text-blue-700 hover:pl-2">Home</a></li>
+                    <li><a href="How.html" class="block py-2 hover:text-blue-700 hover:pl-2">How it works</a></li>
+                    <li><a href="Explore.html" class="block py-2 hover:text-blue-700 hover:pl-2">Explore</a></li>
+                    <li><a href="Community.html" class="block py-2 hover:text-blue-700 hover:pl-2">Community</a></li>
+                    <li><a href="About.html" class="block py-2 hover:text-blue-700 hover:pl-2">About Us</a></li>
+                    <li><a href="Contact.html" class="block py-2 hover:text-blue-700 hover:pl-2">Contact Us</a></li>
+                    <li class="flex flex-col sm:flex-row gap-3 pt-3 border-t">
+                        <button class="bg-blue-950 text-white px-5 py-2.5 rounded-lg hover:bg-blue-900">
+                            <a href="Signup.html">Get Started</a> 
+                        </button>
+                        <button class="bg-blue-200 text-blue-900 px-5 py-2.5 rounded-lg hover:bg-blue-300">
+                            <a href="Signin.html">Sign in</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Navigation Links -->
-        <div class="shadow shadow-gray-400 rounded-full px-8 py-3 bg-white/80 backdrop-blur">
-          <ul class="flex gap-10 text-sm font-medium">
-            <li><a href="index.html" class="hover:text-blue-700">Home</a></li>
-            <li><a href="How.html" class="hover:text-blue-700">How it works</a></li>
-            <li><a href="Explore.html" class="hover:text-blue-700">Explore</a></li>
-            <li><a href="Community.html" class="hover:text-blue-700">Community</a></li>
-            <li><a href="About.html" class="hover:text-blue-700">About Us</a></li>
-            <li><a href="Contact.html" class="hover:text-blue-700">Contact Us</a></li>
-          </ul>
+        <!-- SaaS 50k+ Badge -->
+        <div class="flex justify-center mt-6 sm:mt-8 lg:mt-10 px-4 animate-bounceIn delay-3">
+            <div class="shadow flex flex-col sm:flex-row items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2 rounded-[20px] bg-white/90 backdrop-blur max-w-full hover-lift">
+                <button class="shadow bg-blue-950 text-white px-2 py-2 rounded-[10px] text-sm sm:text-base animate-pulse">
+                    50K+
+                </button>
+                <p class="text-xs sm:text-sm lg:text-base text-center sm:text-left">SaaS for Students, Freelancers and Junior Professionals</p>
+            </div>
         </div>
 
-        <!-- Action Buttons -->
-        <div class="flex gap-6">
-          <button class="bg-blue-950 text-white px-5 py-3 rounded-lg">
-           <a href="Signup.html">Get Started</a> 
-          </button>
-          <button class="bg-blue-200 text-blue-900 px-5 py-3 rounded-lg">
-           <a href="Signin.html">Sign in</a> 
-          </button>
+        <!-- Hero Text -->
+        <div class="text-center px-4 animate-fadeInUp delay-4">
+            <h1 class="font-[Saira] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-4 sm:mt-5 leading-tight">
+                Exchange skills. Build experience. <br class="hidden sm:block">&nbsp;&nbsp;Grow Together
+            </h1>
+            <p class="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
+                A trusted platform where students and professionals <br class="hidden sm:block">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collaborate by exchanging skills -- not money.
+            </p>
         </div>
 
-      </nav>
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-8 lg:mt-10 justify-center px-4 animate-fadeInUp delay-5">
+            <button class="shadow px-6 py-2 sm:py-3 bg-blue-950 text-white rounded-[10px] hover:bg-blue-900 text-sm sm:text-base hover-lift hover-glow">
+                <a href="#">Get Started</a>
+            </button>
+            <button class="bg-blue-200 text-blue-900 px-5 py-3 rounded-lg hover:bg-blue-300 text-sm sm:text-base hover-lift hover-glow">
+                <a href="#">Explore Skills</a>
+            </button>
+        </div>
 
-    
+        <p class="mt-8 sm:mt-12 lg:mt-20 text-center text-xs sm:text-sm lg:text-base px-4 animate-fadeIn delay-6">
+            It's free and takes only few minutes to get started
+        </p>
+    </section>
 
+    <!-- Building Better Collaboration Section -->
+    <div class="text-center mt-8 sm:mt-10 mb-4 sm:mb-5 px-4 animate-fadeInUp">
+        <h1 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-[Saira]">
+            Building Better Collaboration Through Skill Exchange
+        </h1>
+        <br>
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed max-w-6xl mx-auto">
+            Skill Swap was created to solve a simple but persistent problem: people have valuable skills, but lack a structured, <br class="hidden md:block">trusthworthy way to collaborate beyond thier immediate network. <br class="hidden md:block">Students,freelancers,and early--career professionals often need help in areas like design,writing,coding,or <br class="hidden md:block"> research. At the same time, many are eager to contribute thier expertise,ain experience,and build professional <br class="hidden md:block">credibility. Skill Swap bridges this gap by providing a centralized platform where skills are exchanged through <br class="hidden md:block">collaboration --not money.
+        </p>
+    </div>
+    <br>
+
+    <!-- Illustration Image -->
+    <div class="flex justify-center items-center px-4 mb-8 sm:mb-12 animate-scaleIn image-hover">
+        <img 
+            src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974154/Frame_2147258789_dl04mf.png" 
+            alt="Collaboration Illustration" 
+            class="w-full max-w-5xl h-auto rounded-2xl shadow-xl"
+        />
     </div>
 
-    <!-- Saas 50k+ -->
+    <!-- Our Core Values - First Section -->
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-8 sm:mt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-8 sm:mb-12">
+        <div class="w-full lg:w-auto lg:flex-shrink-0 order-2 lg:order-1 animate-slideInLeft image-hover">
+            <img 
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974456/Frame_2147258793_tf9z8u.png" 
+                alt="Core Values Illustration" 
+                class="w-full lg:w-auto h-auto max-w-md mx-auto rounded-xl shadow-lg"
+            />
+        </div>
 
-<div class="flex justify-center mt-10">
-  <div class="shadow flex items-center gap-4 px-4 py-2 rounded-[20px]">
-    <button class="shadow bg-blue-950 text-white px-2 py-2 rounded-[10px]">
-      50K+
-    </button>
+        <div class="w-full lg:flex-1 order-1 lg:order-2 animate-slideInRight">
+            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-semibold font-[Saira] mb-6 sm:mb-8">
+                Our Core Values
+            </h3>
 
-    <p>SaaS for Students, Freelancers and Junior Professionals</p>
-  </div>
-</div>
+            <!-- Values list -->
+            <div class="space-y-4 sm:space-y-6">
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Clear skill definitions and expectations
+                    </p>
+                </div>
 
-<div class="text-center">
-    <h1 class="font-[Saira] text-4xl font-bold text-slate-900 mt-5">Exchange skills. Build experience. <br>&nbsp;&nbsp;Grow Together</h1>
-    <p>A trusted platform where students and professionals <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;collaborate by exchanging skills -- not money.</p>
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Trust, accountability , and reputation
+                    </p>
+                </div>
 
-</div>
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Real collaboration on meaning tasks
+                    </p>
+                </div>
 
-<div class="flex gap-6 mt-10 justify-center">
-    <button class="shadow px-6 py-2 bg-blue-950 text-white rounded-[10px]"><a href="#">Get Started</a></button>
-    <button class="bg-blue-200 text-blue-1100 px-5 py-3 rounded-lg"><a href="#">Explore Skills</a></button>
-</div>
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Career growth through practical experience
+                    </p>
+                </div>
+            </div>
 
-<p class="mt-20 text-center">It's free and takes only few minutes to get started</p>
-
-
-  </section>
-
-<div class="text-center mt-10 mb-5">
-    <h1 class="text-3xl font-bold font-[Saira] ">Building Better Collaboration Through Skill Exchange</h1><br>
-    <p>Skill Swap was created to solve a simple but persistent problem: people have valuable skills, but lack a structured, <br>trusthworthy way to collaborate beyond thier immediate network. <br>Students,freelancers,and early--career professionals often need help in areas like design,writing,coding,or <br> research. At the same time, many are eager to contribute thier expertise,ain experience,and build professional <br>credibility. Skill Swap bridges this gap by providing a centralized platform where skills are exchanged through <br>collaboration --not money.</p>
-</div><br>
-
-<div class="flex justify-center items-center">
-    <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974154/Frame_2147258789_dl04mf.png" alt="">
-</div>
-
-
-<!-- Our Core Values -->
-
-<div class="flex justify-center gap-10 mt-10">
-
-    <div>
-        <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974456/Frame_2147258793_tf9z8u.png" alt="">
+            <!-- Closing paragraph -->
+            <p class="mt-8 sm:mt-10 text-gray-600 text-sm sm:text-base leading-relaxed">
+                Skill Swap is not a gig marketplace or a casual community forum.
+                It is a  <br class="hidden sm:block">collaboration-first ecosystem designed to help people
+                learn, contribute, and grow  <br class="hidden sm:block">together through shared value.
+            </p>
+        </div>
     </div>
 
-    <div>
-  <h3 class="text-[30px] font-semibold font-[Saira] mb-8">
-    Our Core Values
-  </h3>
+    <!-- Core Values - Second Section (Reversed) -->
+    <div class="flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-10 mt-8 sm:mt-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-8 sm:mb-12">
+        <div class="w-full lg:flex-1 order-1 animate-slideInLeft">
+            <h3 class="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-semibold font-[Saira] mb-6 sm:mb-8">
+                Our Core Values
+            </h3>
 
-  <!-- Values list -->
-  <div class="space-y-6">
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Clear skill definitions and expectations
-      </p>
+            <!-- Values list -->
+            <div class="space-y-4 sm:space-y-6">
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Trust first:Clear rules,transparency, and accountability
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Collaboration over transactions: Skills exchanged,not sold
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Growth --Oriented: Learning and experiences matter
+                    </p>
+                </div>
+
+                <div class="flex items-start gap-3 bullet-item p-2 rounded-lg">
+                    <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full flex-shrink-0 bullet-dot"></span>
+                    <p class="leading-relaxed text-sm sm:text-base">
+                        Respectful community: Professional conduct at all times
+                    </p>
+                </div>
+            </div>
+
+            <!-- Closing paragraph -->
+            <p class="mt-8 sm:mt-10 text-gray-600 text-sm sm:text-base leading-relaxed">
+                Skill Swap is not a gig marketplace or a casual community forum.
+                It is a  <br class="hidden sm:block">collaboration-first ecosystem designed to help people
+                learn, contribute, and grow  <br class="hidden sm:block">together through shared value.
+            </p>
+        </div>
+
+        <div class="w-full lg:w-auto lg:flex-shrink-0 order-2 animate-slideInRight image-hover">
+            <img 
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974456/Frame_2147258793_tf9z8u.png" 
+                alt="Core Values Illustration" 
+                class="w-full lg:w-auto h-auto max-w-md mx-auto rounded-xl shadow-lg"
+            />
+        </div>
     </div>
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Trust, accountability , and reputation
-      </p>
+    <!-- Meet the Team Behind SkillSwap -->
+    <div class="mt-12 sm:mt-16 lg:mt-20 text-center mb-8 sm:mb-10 px-4 animate-fadeInUp">
+        <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-[30px] font-semibold font-[Saira] mb-4 sm:mb-6">
+            Meet the Team Behind SkillSwap
+        </h2>
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed max-w-5xl mx-auto">
+            We're passionate group of builders,designers, and problesm--solvers on a mission to make AI support simple <br class="hidden md:block">and human. Every line of code and every feature we create is designed to help small businessess thrive.
+        </p>
     </div>
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Real collaboration on meaning tasks
-      </p>
+    <!-- Team Members Grid -->
+    <div class="flex flex-col md:flex-row lg:flex-row flex-nowrap gap-6 sm:gap-8 lg:gap-10 justify-center px-4 sm:px-6 lg:px-8 mx-auto mb-12 sm:mb-16 overflow-x-auto">
+        <!-- Team Member 1 -->
+        <div class="w-full md:flex-shrink-0 md:w-80 lg:w-96 text-center mx-auto md:mx-0 animate-bounceIn delay-1 hover-lift card-shine bg-white p-4 rounded-xl shadow-lg">
+            <div class="image-hover rounded-xl overflow-hidden mb-3">
+                <img 
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977153/Frame_90_nedzzq.png" 
+                    alt="Ogunsusi Babatunde Olawale" 
+                    class="w-full h-auto"
+                />
+            </div>
+            <h4 class="text-base sm:text-lg lg:text-[18px] font-semibold font-[Saira] text-center">
+                Ogunsusi Babatunde Olawale
+            </h4>
+            <br>
+            <p class="text-gray-500 text-center mb-4 text-sm sm:text-base">CEO And Founder</p>
+            <p class="text-sm sm:text-base leading-relaxed">
+                With over 10 years of experience in SaaS and <br class="hidden sm:block">a passion for automation,Tomi leads Nexora's <br class="hidden sm:block">vision and strategy. He's driven by the belief <br class="hidden sm:block">that AI should empower, not overwhelm.
+            </p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="w-full md:flex-shrink-0 md:w-80 lg:w-96 text-center mx-auto md:mx-0 animate-bounceIn delay-2 hover-lift card-shine bg-white p-4 rounded-xl shadow-lg">
+            <div class="image-hover rounded-xl overflow-hidden mb-3">
+                <img 
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977607/Frame_90_1_frwzqs.png" 
+                    alt="Ajanaku Ashimolowo Benson" 
+                    class="w-full h-auto"
+                />
+            </div>
+            <h4 class="text-base sm:text-lg lg:text-[18px] font-semibold font-[Saira] text-center">
+                Ajanaku Ashimolowo Benson
+            </h4>
+            <br>
+            <p class="text-gray-500 text-center mb-4 text-sm sm:text-base">Chief Technology Officer (CTO)</p>
+            <p class="text-sm sm:text-base leading-relaxed">
+                A former AI researcher turned startup builder, <br class="hidden sm:block">Ben ensures Nexora's engine is both powerful <br class="hidden sm:block">and trusthworthy.He leads the engineering <br class="hidden sm:block">team with a focus on performance, privacy, <br class="hidden sm:block">and scale.
+            </p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="w-full md:flex-shrink-0 md:w-80 lg:w-96 text-center mx-auto md:mx-0 animate-bounceIn delay-3 hover-lift card-shine bg-white p-4 rounded-xl shadow-lg">
+            <div class="image-hover rounded-xl overflow-hidden mb-3">
+                <img 
+                    src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977923/Frame_90_2_l0d76y.png" 
+                    alt="Adetola Abimbola Olawoyin" 
+                    class="w-full h-auto"
+                />
+            </div>
+            <h4 class="text-base sm:text-lg lg:text-[18px] font-semibold font-[Saira] text-center">
+                Adetola Abimbola Olawoyin
+            </h4>
+            <br>
+            <p class="text-gray-500 text-center mb-4 text-sm sm:text-base">Head of Customer Experience</p>
+            <p class="text-sm sm:text-base leading-relaxed">
+                A former AI researcher turned startup builder, <br class="hidden sm:block">Ben ensures Nexora's engine is both powerful <br class="hidden sm:block">and trusthworthy.He leads the engineering <br class="hidden sm:block">team with a focus on performance, privacy, <br class="hidden sm:block">and scale.
+            </p>
+        </div>
     </div>
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Career growth through practical experience
-      </p>
-    </div>
-  </div>
+    <!-- Ready to Start Skill Swapping? -->
+    <div class="mt-12 sm:mt-16 lg:mt-20 text-center bg-[rgba(236,238,255,0.27)] py-12 sm:py-16 lg:py-20 px-4 animate-fadeInUp">
+        <h1 class="font-semibold font-[Saira] text-xl sm:text-2xl md:text-3xl lg:text-[30px] mb-3">
+            Ready to Start Skill Swapping?
+        </h1>
+        <p class="text-sm sm:text-base lg:text-lg leading-relaxed max-w-4xl mx-auto">
+            Create your profile,explore available skills, and collaborate with others who are ready <br class="hidden md:block">to learn and contribute.
+        </p>
 
-  <!-- Closing paragraph -->
-  <p class="mt-10 text-gray-600 ">
-    Skill Swap is not a gig marketplace or a casual community forum.
-    It is a  <br>collaboration-first ecosystem designed to help people
-    learn, contribute, and grow  <br>together through shared value.
-  </p>
-</div>
-
-
-</div>
-
-<!-- Core values 2 -->
-
-<div class="flex justify-center gap-10 mt-10">
-
- 
-
-    <div>
-  <h3 class="text-[30px] font-semibold font-[Saira] mb-8">
-    Our Core Values
-  </h3>
-
-  <!-- Values list -->
-  <div class="space-y-6">
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Trust first:Clear rules,transparency, and accountability
-      </p>
+        <!-- Button Section -->
+        <div class="mt-12 sm:mt-16 lg:mt-20 flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="shadow bg-blue-950 px-6 py-3 rounded-[10px] text-white font-semibold hover:bg-blue-900 text-sm sm:text-base hover-lift hover-glow">
+                Start Skill Swapping
+            </button>
+            <button class="shadow px-6 py-3 rounded-[10px] bg-[rgba(138,148,224,0.4)] font-semibold hover:bg-[rgba(138,148,224,0.6)] text-sm sm:text-base hover-lift hover-glow">
+                Explore Skills
+            </button>
+        </div>
     </div>
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Collaboration over transactions: Skills exchanged,not sold
-      </p>
+    <!-- Footer Section -->
+    <div class="bg-[rgb(12,16,42)] py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <img 
+                class="h-16 sm:h-20 mb-8 sm:mb-10 mx-auto lg:ml-0 animate-float" 
+                src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768850740/image_12_riqp9d.png" 
+                alt="SkillSwap Logo"
+            />
+
+            <!-- Footer Content Grid -->
+            <div class="flex flex-col sm:flex-row flex-wrap lg:flex-nowrap gap-8 sm:gap-10 lg:gap-20 xl:gap-30 justify-center text-white">
+                <!-- Contact Information -->
+                <div class="space-y-3 sm:space-y-4 text-center sm:text-left">
+                    <p class="flex items-start gap-3 text-xs sm:text-sm lg:text-base justify-center sm:justify-start hover:text-blue-300">
+                        <i class="fa-regular fa-envelope mt-1 flex-shrink-0" style="color: #ffffff;"></i>
+                        <span>customercare@skillswap.com</span>
+                    </p>
+                    <br class="hidden sm:block">
+                    <p class="flex items-start gap-3 text-xs sm:text-sm lg:text-base justify-center sm:justify-start hover:text-blue-300">
+                        <i class="fa-solid fa-phone mt-1 flex-shrink-0" style="color: #ffffff;"></i>
+                        <span>+2348101234567</span>
+                    </p>
+                    <br class="hidden sm:block">
+                    <p class="flex items-start gap-3 text-xs sm:text-sm lg:text-base justify-center sm:justify-start hover:text-blue-300">
+                        <i class="fa-solid fa-map-pin mt-1 flex-shrink-0" style="color: #ffffff;"></i>
+                        <span>Skillswap Hq,45 Unity Crescent,Lagos,Nigeria</span>
+                    </p>
+                    <br class="hidden sm:block">
+                    <br class="hidden sm:block">
+                    <p class="flex items-start gap-3 text-xs sm:text-sm lg:text-base justify-center sm:justify-start hover:text-blue-300">
+                        <i class="fa-solid fa-user-group mt-1 flex-shrink-0" style="color: #ffffff;"></i>
+                        <span>Monday -Friday:9:00 AM -5:00 PM (WAT)</span>
+                    </p>
+                    <br class="hidden sm:block">
+                </div>
+
+                <!-- Product -->
+                <div class="space-y-3 text-center sm:text-left">
+                    <h4 class="text-base sm:text-lg lg:text-[20px] font-semibold">Product</h4>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">How it Works</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Explore Skills</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Trust & Safety</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Community Guideline</p>
+                </div>
+
+                <!-- Legal -->
+                <div class="space-y-3 text-center sm:text-left">
+                    <h4 class="text-base sm:text-lg lg:text-[20px] font-semibold">Legal</h4>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Terms of Service</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Privacy Policy</p>
+                </div>
+
+                <!-- Our Company -->
+                <div class="space-y-3 text-center sm:text-left">
+                    <h4 class="text-base sm:text-lg lg:text-[20px] font-semibold">Our Company</h4>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">About Us</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Contact Us</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">Meet The Team</p>
+                    <br>
+                    <p class="text-xs sm:text-sm lg:text-base hover:text-blue-300 cursor-pointer hover:pl-2">FAQs</p>
+                </div>
+            </div>
+
+            <!-- Social media Icons -->
+            <div class="flex justify-center lg:justify-start gap-4 sm:gap-5 mt-8 sm:mt-10 mb-8 sm:mb-10">
+                <span class="rounded-full shadow bg-white p-2 hover:bg-blue-100 cursor-pointer hover-scale hover:rotate-12">
+                    <i class="fa-brands fa-linkedin-in text-blue-950"></i>
+                </span>
+                <span class="rounded-full shadow bg-white p-2 hover:bg-blue-100 cursor-pointer hover-scale hover:rotate-12">
+                    <i class="fa-brands fa-twitter text-blue-950" style="color: #000000;"></i>
+                </span>
+                <span class="rounded-full shadow bg-white p-2 hover:bg-blue-100 cursor-pointer hover-scale hover:rotate-12">
+                    <i class="fa-brands fa-instagram text-blue-950" style="color: #000000;"></i>
+                </span>
+                <span class="rounded-full shadow bg-white p-2 hover:bg-blue-100 cursor-pointer hover-scale hover:rotate-12">
+                    <i class="fa-brands fa-facebook-f text-blue-950" style="color: #000000;"></i>
+                </span>
+            </div>
+            <br>
+
+            <hr class="border-t border-gray-300 my-6 mx-auto max-w-2xl lg:mx-60" />
+
+            <!-- Copyright -->
+            <div class="text-white text-center mt-8 sm:mt-10">
+                <p class="text-xs sm:text-sm">&copy; 2026 Skill Swap & Collaboration Hub. All rights reserved.</p>
+            </div>
+        </div>
     </div>
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Growth --Oriented: Learning and experiences matter
-      </p>
-    </div>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
 
-    <div class="flex items-start gap-3">
-      <span class="mt-2 w-1.5 h-1.5 bg-black rounded-full"></span>
-      <p class="leading-relaxed">
-        Respectful community: Professional conduct at all times
-      </p>
-    </div>
-  </div>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-  <!-- Closing paragraph -->
-  <p class="mt-10 text-gray-600 ">
-    Skill Swap is not a gig marketplace or a casual community forum.
-    It is a  <br>collaboration-first ecosystem designed to help people
-    learn, contribute, and grow  <br>together through shared value.
-  </p>
-</div>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) translateX(0) scale(1)';
+                }
+            });
+        }, observerOptions);
 
-   <div>
-        <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768974456/Frame_2147258793_tf9z8u.png" alt="">
-    </div>
+        // Observe all animated elements on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-fadeInUp, .animate-slideInLeft, .animate-slideInRight, .animate-scaleIn, .animate-bounceIn');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
 
-
-</div>
-
-
-<!-- Meet the Team Behind SkillSwap -->
-
-<div class="mt-20 text-center mb-10">
-    <h2 class="text-[30px] font-semibold font-[Saira] mb-6">Meet the Team Behind SkillSwap</h2>
-    <p>We're passionate group of builders,designers, and problesm--solvers on a mission to make AI support simple <br>and human. Every line of code and every feature we create is designed to help small businessess thrive.</p>
-</div>
-
-
-<!--  Behind SkillSwap Team -->
-
-<div class="flex gap-10 justify-center">
-
-    <div>
-        <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977153/Frame_90_nedzzq.png" alt="">
-        <h4 class="text-[18px] font-semibold font-[Saira] text-center">Ogunsusi Babatunde Olawale</h4><br>
-        <p class="text-gray-500 text-center mb-4">CEO And Founder</p>
-        <p>With over 10 years of experience in SaaS and <br>a passion for automation,Tomi leads Nexora's <br>vision and strategy. He's driven by the belief <br>that AI should empower, not overwhelm.</p>
-    </div>
-
-    <div>
-        <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977607/Frame_90_1_frwzqs.png" alt="">
-        <h4 class="text-[18px] font-semibold font-[Saira] text-center">Ajanaku Ashimolowo Benson</h4><br>
-        <p class="text-gray-500 text-center mb-4">Chief Technology Officer (CTO)</p>
-        <p>A former AI researcher turned startup builder, <br>Ben ensures Nexora's engine is both powerful <br>and trusthworthy.He leads the engineering <br>team with a focus on performance, privacy, <br>and scale.</p>
-    </div>
-
-    <div>
-        <img src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768977923/Frame_90_2_l0d76y.png" alt="">
-        <h4 class="text-[18px] font-semibold font-[Saira] text-center">Adetola Abimbola Olawoyin</h4><br>
-        <p class="text-gray-500 text-center mb-4">Head of Customer Experience</p>
-        <p>A former AI researcher turned startup builder, <br>Ben ensures Nexora's engine is both powerful <br>and trusthworthy.He leads the engineering <br>team with a focus on performance, privacy, <br>and scale.</p>
-    </div>
-
-
-
-
-</div>
-
-
-<!-- Ready to Start Skill Swapping? -->
-
-<div class="mt-20 text-center  bg-[rgba(236,238,255,0.27)] py-20">
-  <h1 class="font-semibold font-[Saira] text-[30px] mb-3 ">Ready to Start Skill Swapping?</h1>
-  <p>Create your profile,explore available skills, and collaborate with others who are ready <br>to learn and contribute. </p>
-
-  <!-- Button Section -->
-
-  <div class="mt-20 flex gap-4 justify-center">
-
-    <button class="shadow bg-blue-950 px-6 py-3 rounded-[10px] text-white font-semibold">Start Skill Swapping</button>
-  <button class="shadow px-6 py-3 rounded-[10px] bg-[rgba(138,148,224,0.4)] font-semibold
-">Explore Skills</button>
-
-  </div>
-  
-</div>
-
-<!-- Footer Section -->
-
-<div class="bg-[rgb(12,16,42)] py-10">
-  <img class="ml-50 mb-10" src="https://res.cloudinary.com/dezoqbzim/image/upload/v1768850740/image_12_riqp9d.png" alt="">
-
-  <!-- Parent table Div -->
-  
-
-    <div class="flex gap-30 justify-center">
-
-<!-- Table contents -->
-      <div class="text-white">
-    <p><i class="fa-regular fa-envelope" style="color: #ffffff;"></i> customercare@skillswap.com</p><br>
-    <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i> +2348101234567 </p><br>
-    <p><i class="fa-solid fa-map-pin" style="color: #ffffff;"></i> Skillswap Hq,45 Unity Crescent,Lagos,Nigeria</p><br><br>
-    <p><i class="fa-solid fa-user-group" style="color: #ffffff;"></i> Monday -Friday:9:00 AM -5:00 PM (WAT)</p><br>
-    
-  </div>
-  <div class="text-white ">
-    <h4 class="text-[20px]">Product</h4><br>
-    <p>How it Works</p><br>
-    <p>Explore Skills</p><br>
-    <p>Trust & Safety</p><br>
-    <p>Community Guideline</p>
-
-  </div>
-
-  <div class="text-white">
-    <h4 class="text-[20px]">Legal</h4><br>
-    <p>Terms of Service</p><br>
-    <p>Privacy Policy</p>
-
-  </div>
-
-  <div class="text-white">
-    <h4 class="text-[20px]">Our Company</h4><br>
-    <p>About Us</p><br>
-    <p>Contact Us</p><br>
-    <p>Meet The Team</p><br>
-    <p>FAQs</p>
-
-  </div>
-
-    </div>
-
-    <!-- Social media Icons -->
-
-    <div class="ml-54 mb-10 space-x-5 mt-10" >
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-linkedin-in"></i></span>
-
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-twitter" style="color: #000000;"></i></span>
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-instagram" style="color: #000000;"></i></span>
-      <span class="rounded-[100%] shadow bg-white p-2"><i class="fa-brands fa-facebook-f" style="color: #000000;"></i></span>
-    </div><br>
-
-    <hr class="border-t border-gray-300 my-6 ml-60 mr-60" />
-
-  
-
-  <!-- &copy footer -->
-
-<div class="text-white text-center mt-10">
-  <p>&copy; 2026 Skill Swap & Collaboration Hub. All rights reserved. </p>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
